@@ -16,5 +16,11 @@ namespace testdb2
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            demodatabaseEntities db = new demodatabaseEntities();
+            dataGridView1.DataSource = db.HOADONs.ToList();
+        }
     }
 }
